@@ -1,11 +1,14 @@
 import { useState, useEffect } from 'react';
 import styles from './RockPaperScissorGame.module.scss';
 
+const hiddenWisdomStyle = "padding:12px;background-color:#4AA6E0;color:white;font-size:14px;";
 const CHOICES = [
   { name: "rock", emoji: "✊" },
   { name: "paper", emoji: "✋" },
   { name: "scissors", emoji: "✌️" },
 ];
+
+const replay = {emoji: "😎"};
 
 function RockPaperScissorGame() {
   const [playerChoice, setPlayerChoice] = useState(null);
@@ -13,7 +16,6 @@ function RockPaperScissorGame() {
   const [result, setResult] = useState(null);
 
   useEffect(()=> {
-    const hiddenWisdomStyle = "padding:12px;background-color:#4AA6E0;color:white;font-size:14px;";
     console.log("%cIs randomness random? Or is there something else at play?", hiddenWisdomStyle);
   }, []);
 
@@ -65,7 +67,9 @@ function RockPaperScissorGame() {
             <p>Randomness chose {randomChoice.name}</p>
           </div>
           <h2 className={styles.winner}>{result}</h2>
-          <button className={styles.replayButton} onClick={resetGame}>Play again</button>
+          <button className={styles.replayButton} onClick={resetGame}>
+            <span>play </span> {replay.emoji}<span> again</span>
+          </button>
         </div>
       )}
     </div>
