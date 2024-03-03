@@ -1,0 +1,33 @@
+@import './_buttons.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  transition: all 250ms ease-out;
+}
+
+.main-nav {
+  font-size: 16px;
+  margin-right: 16px;
+
+  ul {
+    padding-inline-start: 0;
+
+    li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.nazar-eye {
+  font-size: 180px;
+  margin-bottom: 40px;
+}

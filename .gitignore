@@ -1,0 +1,15 @@
+# dependencies
+/app/node_modules
+/app/.pnp
+/app/.pnp.js
+
+# testing
+/app/coverage
+
+# production
+/app//build
+
+# misc
+/app/npm-debug.log*
+/app/yarn-debug.log*
+/app/yarn-error.log*
